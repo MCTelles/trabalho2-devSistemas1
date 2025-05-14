@@ -7,21 +7,83 @@
   height: 100vh;
   gap: 18px;
 
-  .circulo {
+  .circuloLogo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 134px;
+    width: 100%;
+    max-width: 134px;
     height: 134px;
     border-radius: 50%;
     background-color: #ffffff;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.26);
+
+    img {
+      height: 100%;
+      width: 100%;
+      max-width: 81.4px;
+      max-height: 92px;
+    }
   }
 
-  span {
+  .greetingsSpan {
+    font-family: "Nunito Sans", sans-serif;
     padding: 0px 63px;
     text-align: center;
     font-weight: lighter;
     font-size: 19px;
+  }
+
+  .createAccount {
+    border: none;
+    width: 100%;
+    max-width: 335px;
+    height: 61px;
+    margin: 106px 0px 24px;
+    font-family: "Nunito Sans", sans-serif;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: lighter;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #004cff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .createAccount:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .loginHomeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    .accountCreateSpan {
+      font-family: "Nunito Sans", sans-serif;
+      text-align: center;
+      font-weight: lighter;
+    }
+
+    .loginButton {
+      align-items: center;
+      background-color: #004cff;
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .loginButton:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .arrow {
+      margin-top: 4px;
+    }
   }
 }
