@@ -1,7 +1,7 @@
 import styles from "./Home.module.scss";
 
 import logoShopee from "../../assets/logoShopeeAMF.png";
-import arrowIcon from "../../assets/Arrow.svg";
+import arrowIcon from "../../assets/arrow.svg";
 
 function Home() {
   return (
@@ -18,15 +18,14 @@ function Home() {
 
       <button className={styles.createAccount}>Let's get started</button>
 
-      <div className={styles.loginHomeContainer}>
+      <button className={styles.loginHomeContainer} type="button">
         <span className={styles.accountCreateSpan}>
           I already have an account
         </span>
-
-        <button className={styles.loginButton}>
-          <img className={styles.arrow} src={arrowIcon} alt="Setinha" />
-        </button>
-      </div>
+        <div className={styles.loginButton}>
+          <img src={arrowIcon} alt="Setinha" />
+        </div>
+      </button>
     </div>
   );
 }
