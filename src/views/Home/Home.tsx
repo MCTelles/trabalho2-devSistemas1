@@ -1,9 +1,11 @@
 import styles from "./Home.module.scss";
 
 import logoShopee from "../../assets/logoShopeeAMF.png";
-import arrowIcon from "../../assets/arrow.svg";
+import { useNavigate } from "react-router";
 
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.homeContainer}>
       <div className={styles.circuloLogo}>
@@ -16,15 +18,26 @@ function Home() {
         Beautiful eCommerce UI Kit for your online store
       </span>
 
-      <button className={styles.createAccount}>Let's get started</button>
+      <button
+        className={styles.createAccount}
+        type="button"
+        onClick={() => {
+          navigate("/createAccount");
+        }}
+      >
+        Let's get started
+      </button>
 
-      <button className={styles.loginHomeContainer} type="button">
+      <button
+        className={styles.loginHomeContainer}
+        type="button"
+        onClick={() => {
+          navigate("/login");
+        }}
+      >
         <span className={styles.accountCreateSpan}>
           I already have an account
         </span>
-        <div className={styles.loginButton}>
-          <img src={arrowIcon} alt="Setinha" />
-        </div>
       </button>
     </div>
   );
