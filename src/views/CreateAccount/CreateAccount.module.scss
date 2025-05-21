@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  //   max-width: 375px;
 
   h1 {
     margin-top: 122px;
@@ -24,8 +23,9 @@
       border: none;
       border-radius: 999px;
       font-size: 13px;
-      color: var(--grey-200);
+      color: var(--grey-900);
       outline: none;
+      font-family: "Poppins", sans-serif;
 
       &::placeholder {
         opacity: 0.6;
@@ -38,39 +38,36 @@
       background-color: #f9f9f9;
       border-radius: 999px;
       padding: 0.6rem 1rem;
-      width: 100%;
-      max-width: 300px;
+      max-width: 354px;
     }
 
-    .flagSelector {
-      display: flex;
-      align-items: center;
-      position: relative;
+    .flag {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
 
-      .flag {
-        width: 12px;
-        height: 16px;
-        border-radius: 4px;
-        object-fit: cover;
-        margin-right: 4px;
-      }
-
-      .select {
-        appearance: none;
-        border: none;
-        background: transparent;
-        font-size: 0.9rem;
-        color: #333;
-        padding-right: 10px;
-        cursor: pointer;
-      }
+    .countryCode {
+      appearance: none; /* Remove a aparência padrão */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: url('data:image/svg+xml;utf8,<svg fill="%23000" height="10" width="10" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M0 0l5 6 5-6z"/></svg>')
+        no-repeat right 10px center;
+      background-size: 10px;
+      padding-left: 10px;
+      padding-right: 25px; /* Espaço para a seta */
+      border: none;
+      outline: none;
+      font-size: 14px;
+      cursor: pointer;
     }
 
     .separator {
-      width: 2px;
+      width: 1px;
       height: 24px;
       background-color: #000000;
-      margin: 0 12px;
+      margin: 5px;
     }
 
     .phoneField {
@@ -78,12 +75,55 @@
       outline: none;
       background: transparent;
       flex: 1;
-      font-size: 0.9rem;
+      font-size: 13px;
       color: #333;
+      padding-left: 8px;
 
       &::placeholder {
         color: #999;
         opacity: 0.6;
+      }
+    }
+  }
+
+  .buttonsContainer {
+    gap: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Nunito Sans", sans-serif;
+
+    .doneButton {
+      width: 335px;
+      height: 61px;
+      color: var(--grey-100);
+      background-color: var(--blue-500);
+      border-radius: 999px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-size: 22px;
+      font-weight: lighter;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    .cancelButton {
+      width: 295px;
+      height: 61px;
+      color: var(--grey-900);
+      background-color: var(--blue-100);
+      border-radius: 999px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-size: 18px;
+      font-weight: lighter;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
       }
     }
   }
