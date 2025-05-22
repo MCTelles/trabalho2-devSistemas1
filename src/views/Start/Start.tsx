@@ -1,10 +1,17 @@
-import styles from "./Home.module.scss";
-
-import logoShopee from "../../assets/logoShopeeAMF.png";
 import { useNavigate } from "react-router";
 
-function Home() {
+import logoShopee from "../../assets/logoShopeeAMF.png";
+import { Loader } from "../../components/Loader/Loader";
+import { useFakeLoading } from "../../hooks/useFakingLoading";
+
+import styles from "./Start.module.scss";
+
+function Start() {
   const navigate = useNavigate();
+
+  const loading = useFakeLoading(1500);
+
+  if (loading) return <Loader />;
 
   return (
     <div className={styles.homeContainer}>
@@ -43,4 +50,4 @@ function Home() {
   );
 }
 
-export { Home };
+export { Start };
