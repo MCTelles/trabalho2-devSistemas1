@@ -10,6 +10,10 @@ import { Payment } from "./views/Payment/Payment";
 import { Profile } from "./views/Profile/Profile";
 import { Shop } from "./views/Shop/Shop";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 // import styles from "./App.module.scss";
 
 function App() {
