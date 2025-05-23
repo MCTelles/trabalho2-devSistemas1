@@ -1,5 +1,5 @@
 function Profile() {
-  return <div>Profile</div>;
+  return <div className={styles.profileContainer}>Profile</div>;
 }
 
 export { Profile };
