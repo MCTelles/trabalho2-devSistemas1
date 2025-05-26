@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "productName": "Camiseta Básica Branca",
+        "price": 49.9,
+        "productImage": "https://example.com/images/camiseta-branca.jpg",
+        "category": "Camisetas"
+    },
+    {
+        "id": 2,
+        "productName": "Calça Jeans Skinny",
+        "price": 129.9,
+        "productImage": "https://example.com/images/calca-jeans.jpg",
+        "category": "Calças"
+    },
+    {
+        "id": 3,
+        "productName": "Jaqueta de Couro Preta",
+        "price": 299.9,
+        "productImage": "https://example.com/images/jaqueta-couro.jpg",
+        "category": "Jaquetas"
+    },
+    {
+        "id": 4,
+        "productName": "Vestido Estampado Floral",
+        "price": 159.9,
+        "productImage": "https://example.com/images/vestido-floral.jpg",
+        "category": "Vestidos"
+    },
+    {
+        "id": 5,
+        "productName": "Tênis Casual Branco",
+        "price": 199.9,
+        "productImage": "https://example.com/images/tenis-branco.jpg",
+        "category": "Calçados"
+    },
+    {
+        "id": 6,
+        "productName": "Camisa Social Azul",
+        "price": 89.9,
+        "productImage": "https://example.com/images/camisa-azul.jpg",
+        "category": "Camisas"
+    },
+    {
+        "id": 7,
+        "productName": "Shorts Jeans Feminino",
+        "price": 79.9,
+        "productImage": "https://example.com/images/shorts-jeans.jpg",
+        "category": "Shorts"
+    },
+    {
+        "id": 8,
+        "productName": "Blusa de Tricô Bege",
+        "price": 99.9,
+        "productImage": "https://example.com/images/blusa-trico.jpg",
+        "category": "Blusas"
+    }
+]
