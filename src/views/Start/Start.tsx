@@ -29,7 +29,7 @@ function Start() {
         className={styles.createAccount}
         type="button"
         onClick={() => {
-          navigate("/createAccount");
+          navigate("/create-account");
         }}
       >
         Let's get started
