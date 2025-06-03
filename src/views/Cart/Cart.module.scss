@@ -1,0 +1,12 @@
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 375px;
+  margin: 58px auto;
+  background-color: #f9f9f9; /* cor de fundo clara */
+  border-radius: 10px; /* bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra suave */
+  color: #333; /* cor do texto */
+}

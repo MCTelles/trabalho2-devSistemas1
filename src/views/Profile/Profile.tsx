@@ -1,13 +1,13 @@
 import { ImageCarousel } from "../../components/ImageCarousel/ImageCarousel";
 import styles from "./Profile.module.scss";
 
-import product1 from "../../assets/products/product1.jpg";
-import product2 from "../../assets/products/product2.jpg";
-import product3 from "../../assets/products/product3.jpg";
-import product4 from "../../assets/products/product4.jpg";
-import product5 from "../../assets/products/product5.jpg";
-import product6 from "../../assets/products/product6.jpg";
-import product7 from "../../assets/products/product7.jpg";
+import product1 from "../../../public/images/product1.jpg";
+import product2 from "../../../public/images/product2.jpg";
+import product3 from "../../../public/images/product3.jpg";
+import product4 from "../../../public/images/product4.jpg";
+import product5 from "../../../public/images/product5.jpg";
+import product6 from "../../../public/images/product6.jpg";
+import product7 from "../../../public/images/product7.jpg";
 
 import avatarProfile from "../../assets/avatarProfile.svg";
 
