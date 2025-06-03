@@ -1,6 +1,12 @@
-import styles from "./Cart.module.scss";
 import { useProducts } from "../../hooks/useProducts";
+import { useNavigate } from "react-router";
+
 import editButtonIcon from "../../assets/editButton.png";
+import moreButton from "../../assets/moreButton.svg";
+import lessButton from "../../assets/lessButton.svg";
+import deleteButton from "../../assets/deleteButton.svg";
+
+import styles from "./Cart.module.scss";
 
 function Cart() {
   const { cart, setCart } = useProducts();
@@ -32,53 +38,72 @@ function Cart() {
     0
   );
 
+  const navigate = useNavigate();
+
   return (
     <div className={styles.cartContainer}>
-      <h2>Cart</h2>
+      <h2 className={styles.cartLabel}>Cart</h2>
 
       <div className={styles.addressCard}>
-        <h2>Shipping Address</h2>
+        <h2 className={styles.shippingLabel}>Shipping Address</h2>
 
-        <p>Rua das Flores, 123, Bairro Jardim, São Paulo, SP</p>
+        <div className={styles.addressInfo}>
+          <p>Rua das Flores, 123, Bairro Jardim, São Paulo, SP</p>
 
-        <button className={styles.editButton}>
-          <img src={editButtonIcon} alt="" />
-        </button>
+          <button className={styles.editButton}>
+            <img src={editButtonIcon} alt="" />
+          </button>
+        </div>
       </div>
 
       <div className={styles.productsList}>
         {cart.map((item) => (
           <div key={item.id} className={styles.productItem}>
-            <img src={item.productImage} alt={item.productName} />
+            <img
+              className={styles.productImage}
+              src={item.productImage}
+              alt={item.productName}
+            />
 
             <div className={styles.productInfo}>
               <p>{item.productName}</p>
 
-              <strong>${item.price.toFixed(2)}</strong>
+              <h2>${item.price.toFixed(2)}</h2>
             </div>
             <div className={styles.controls}>
-              <button onClick={() => decrement(item.id)}>-</button>
+              <button onClick={() => decrement(item.id)}>
+                <img src={lessButton} />
+              </button>
 
               <span>{item.quantity || 1}</span>
 
-              <button onClick={() => increment(item.id)}>+</button>
-            </div>
+              <button onClick={() => increment(item.id)}>
+                <img src={moreButton} />
+              </button>
 
-            <button
-              className={styles.deleteBtn}
-              onClick={() => remove(item.id)}
-            >
-              🗑️
-            </button>
+              <button
+                className={styles.deleteBtn}
+                onClick={() => remove(item.id)}
+              >
+                <img src={deleteButton} alt="remover" />
+              </button>
+            </div>
           </div>
         ))}
       </div>
 
       <div className={styles.checkoutBar}>
-        <strong>
+        <h2 className={styles.totalLabel}>
           Total <span>${total.toFixed(2)}</span>
-        </strong>
-        <button className={styles.checkoutBtn}>Checkout</button>
+        </h2>
+        <button
+          className={styles.checkoutButton}
+          onClick={() => {
+            navigate("/payment");
+          }}
+        >
+          Checkout
+        </button>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { Card } from "../../components/Card/Card";
 import styles from "./Shop.module.scss";
-import Select, { components } from "react-select";
+import Select from "react-select";
 import { useNavigate } from "react-router";
 import { useProducts } from "../../hooks/useProducts";
 
