@@ -29,10 +29,15 @@ function Shop() {
     );
   };
 
+  const filtered = filteredProducts();
+  console.log("filtered", filtered);
+
   const customComponents = {
     DropdownIndicator: () => null,
     ClearIndicator: () => null,
   };
+
+  console.log("products no Shop", products);
 
   return (
     <div className={styles.shopContainer}>
@@ -78,15 +83,16 @@ function Shop() {
         />
       </div>
       <div className={styles.productGrid}>
-        {filteredProducts().map(({ id, productImage, productName, price }) => (
-          <div key={id} onClick={() => navigate(`/buy-product/${id}`)}>
-            <Card
-              productImage={productImage}
-              productName={productName}
-              productPrice={price}
-            />
-          </div>
-        ))}
+        {Array.isArray(filtered) &&
+          filtered.map(({ _id, productImage, productName, price }) => (
+            <div key={_id} onClick={() => navigate(`/buy-product/${_id}`)}>
+              <Card
+                productImage={productImage}
+                productName={productName}
+                productPrice={price}
+              />
+            </div>
+          ))}
       </div>
     </div>
   );

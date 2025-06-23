@@ -4,8 +4,8 @@ import { useProducts } from "../../hooks/useProducts";
 
 function BuyProduct() {
   const { id } = useParams();
-  const { products, cart, setCart } = useProducts();
-  const product = products.find((product) => product.id === Number(id));
+  const { products, setCart } = useProducts();
+  const product = products.find((product) => product._id === String(id));
   const navigate = useNavigate();
 
   const addToCart = () => {

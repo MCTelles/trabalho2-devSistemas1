@@ -29,14 +29,14 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const fetchProductList = async () => {
       try {
-        const { data } = await fetch(
-          "../../../fakeAPI/fake_clothing_api.json"
-        ).then((data) => data.json());
-
+        setLoading(true);
+        const response = await fetch("http://localhost:5000/products");
+        const data = await response.json();
         setProducts(data);
       } catch (error) {
-        console.log(error);
+        console.error("Erro ao carregar produtos:", error);
       } finally {
+        setLoading(false);
       }
     };
 
